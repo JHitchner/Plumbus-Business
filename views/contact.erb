@@ -1,20 +1,39 @@
-<p id= "shopping">Contact Us</p>
-
-<img id="plumbus" src="Plumbus.jpg">
-
-<input id="number" maxlength="1" size="1">
-
-<button id="order" type="button">How Many Plumbus's Would You Like To Order? (Max. 9)
-</button>
-
-<p id="amount"></p>
-
-<div id = "div">
-  <input id="number" maxlength="10" size ="10"> Username
-  <p>
-    <input id="number" maxlength="15" size ="15"> Password
+<p id="contact_header">
+  Contact Us!
+</p>
+<p id="contact_asl">
+  ASL?
+</p>
+<div id="info_container"
+  <p class="information">
+    <em>Questions:
+      <b>customerservice@plumbus.com</b>
+    </em>
   </p>
-  <p>
-    <button id="signup">Sign Up To Complete Order</button>
+  <p class="information">
+    <em>Press and Inquiries:
+      <b>press@plumbus.com</b>
+    </em>
+  </p>
+  <p class="information">
+    <em>Compliments:
+      <b>Share on Twitter!</b>
+    </em>
+  </p>
+  <p class="information">
+    <em>Phone Number:
+      <b>Plumbus will do it for you!</b>
+    </em>
   </p>
 </div>
+<div id="contact_emailBehind">
+</div>
+<form id="emailSub" action="/response" method="post">
+  <input id="sender"type="text" name="from" value="" placeholder="Sender's Email">
+  <input id="receiver"type="text" name="to" value="" placeholder="Receiver's Email">
+  <input id="subject"type="text" name="subject" value="" placeholder="Subject:">
+  <textarea name="content" rows="8" cols="80">
+    What's your favorite part of Plumbus?
+  </textarea>
+</form>
+<button id="submit"type="submit" form="emailSub"name="button">Send</button>

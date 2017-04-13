@@ -1,3 +1,5 @@
+// Home page
+
 var floob =document.getElementById("floob");
 var grodus =document.getElementById("grodus");
 var chumble =document.getElementById("chumble");
@@ -8,7 +10,7 @@ var chbBtn =document.getElementById("moused_chb");
 var grbBtn =document.getElementById("moused_grb");
 
 
-
+// Display click events for the differet parts of Plumbus
 flbBtn.addEventListener("click", function() {
   floob.style.display = "block";
 })

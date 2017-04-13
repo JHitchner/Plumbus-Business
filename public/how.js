@@ -1,21 +1,21 @@
-var pictureIndex = 1;
-showPictures(pictureIndex);
+var backward = document.getElementById("prev");
+var forward = document.getElementById("next");
+var myArray = document.getElementsByClassName("pics");
+var pictureIndex = 0;
 
-function plusPictures(n) {
-  showPictures(pictureIndex += n);
-}
-
-function currentPictures(n) {
-  showPictures(pictureIndex = n);
-}
-
-function showPictures(n) {
-  var i;
-  var pictures = document.getElementsByClassName("pics");
-  if (n > pictures.length) {pictureIndex = 1}
-  if (n < 1) {pictureIndex = picture.length}
-  for (i = 0; i < pictures.length; i++) {
-      pictures[i].style.display = "none";
-  }
-  pictures[pictureIndex-1].style.display = "block";
-}
+backward.addEventListener("click", function(event) {
+  myArray[pictureIndex].style.display = "none";
+  pictureIndex--;
+  if(pictureIndex < 0) {
+    pictureIndex = 6;
+  };
+  myArray[pictureIndex].style.display = "block";
+})
+forward.addEventListener("click", function(event) {
+  myArray[pictureIndex].style.display = "none";
+  pictureIndex++;
+  if(pictureIndex > 6) {
+    pictureIndex = 0;
+  };
+  myArray[pictureIndex].style.display = "block";
+});
